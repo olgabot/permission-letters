@@ -182,13 +182,30 @@ FUNCTION {emphasize}
 
 INTEGERS { nameptr namesleft numnames }
 
+FUNCTION {cv.author}
+{ "Olga B Botvinnik" } 
+
+FUNCTION {highlight}
+{ duplicate$ empty$
+      { pop$ "" }
+      { "\textbf{\textsc{" swap$ * "}}" * }
+   if$
+}
+
+FUNCTION {highlight.if.cv.author}
+{ duplicate$ purify$ cv.author purify$ =
+    { highlight }
+    'skip$
+  if$
+}
+
 FUNCTION {format.names}
 { 's :=
   #1 'nameptr :=
   s num.names$ 'numnames :=
   numnames 'namesleft :=
     { namesleft #0 > }
-    { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't :=
+    { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ highlight.if.cv.author 't :=
       nameptr #1 >
         { namesleft #1 >
             { ", " * t * }

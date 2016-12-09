@@ -17,14 +17,34 @@
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 
+% \usepackage[backend=biber,style=numeric-comp,
+% sorting=none,defernumbers=true]{biblatex}%mod.
+% \DeclareBibliographyCategory{cited}
+% \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
+% \addbibresource{publications.bib}
+
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 %\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
 
-\usepackage{multibib}
-\newcites{book,misc}{{Books},{Others}}
+% \usepackage{multibib}
+% \newcites{book,misc}{{Books},{Others}}
+
+% \newcommand{\makeauthorbold}[1]{%
+% \DeclareNameFormat{author}{%
+%   \ifnumequal{\value{listcount}}{1}
+%     {\ifnumequal{\value{liststop}}{1}
+%       {\expandafter\ifstrequal{##1}{#1}{\textbf{##1\addcomma\addspace ##4\addcomma\isdot}}{##1\addcomma\addspace ##4\addcomma\isdot}}
+%       {\expandafter\ifstrequal{##1}{#1}{\textbf{##1\addcomma\addspace ##4}}{##1\addcomma\addspace ##4}}}
+%     {\ifnumless{\value{listcount}}{\value{liststop}}
+%       {\expandafter\ifstrequal{##1}{#1}{\textbf{\addcomma\addspace ##1\addcomma\addspace ##4}}{\addcomma\addspace ##1\addcomma\addspace ##4}}
+%       {\expandafter\ifstrequal{##1}{#1}{\textbf{\addcomma\addspace ##1\addcomma\addspace ##4\addcomma\isdot}}{\addcomma\addspace ##1\addcomma\addspace ##4\addcomma\isdot}}%
+%     }%
+% }%
+% }
+% \makeauthorbold{Botvinnik}
 
 
 % personal data
@@ -96,7 +116,7 @@
 \cvline{2009}{Bernard M. Gordon-MIT Engineering Leadership Program}
 \cvline{2008}{Howard Hughes Medical Institute Janelia Farm Research Summer Scholar}
 
-\section{Publications}
+% \section{Publications}
 
 
 % Add book with Pavel and Philip
@@ -104,24 +124,45 @@
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+ % to redefine the heading string ("Publications"): 
+%  \renewcommand{\refname}{}
+% \def\FormatName#1{%
+%   \def\myname{Olga B Botvinnik}%
+%   \edef\name{#1}%
+%   \ifx\name\myname
+%     \textbf{#1}%
+%   \else
+%     #1%
+%   \fi
+% }
 
+% --- START For use with BibLatex --- 
+% \begin{refsection}[publications]
+% \nocite{*} 
+% \printbibliography[resetnumbers=true,sorting=ynt,%mod
+% title={Entire publication list sorted by year}]   
+% \end{refsection}
+% ---- END for use with biblatex ----
+
+% --- START For use with BibTeX, not BibLaTeX .... ---
+\nocite{*}
+\bibliographystyle{plainolga}
+% \biblographystyle{plain}
+\bibliography{publications}                    % 'publications' is the name of a BibTeX file
+% ---- END for use with bibtex ----
+
+
+% --- START for use with multibib package ---
 % Publications from a BibTeX file using the multibib package
 % \section{Publications}
 
-
-
-
 % \nocitebook{book1,book2}
 % \bibliographystylebook{plain}
-% \bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+% \bibliographybook{example}                   % 'example' is the name of a BibTeX file
 % \nocitemisc{misc1,misc2,misc3}
 % \bibliographystylemisc{plain}
-% \bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
-
+% \bibliographymisc{example}                   % 'example' is the name of a BibTeX file
+% --- END for use with multibib package ----
 
 \section{Talks}
 
@@ -146,13 +187,13 @@ Presented \texttt{flotilla} software, taught ``coding for neuroscientists'' tuto
 Founded graduate student council organization for UCSD Bioinformatics and Systems Biology Program. Advocated for student voices, organized ``town hall'' meetings, social hours, fellowhsip peer review, and led a team of eight vice presidents and representatives.
 }
 
-\cventry{2013--2016}{Volunteer}{San Diego Science and Engineering Festival}{San Diego, CA}{}{Developed and demonstrated bioinformatics modules to ages 2-18 at UCSD Bioinformatics booth.}
+\cventry{2013--2016}{Volunteer}{San Diego Science and Engineering Festival}{San Diego, CA}{}{Developed and demonstrated bioinformatics modules to all ages at UCSD Bioinformatics booth.}
 
 \cventry{2013--2014}{Instructor}{Bioinformatics Algorithms}{Coursera.org}{}{Developed interactive curriculum for online Bioinformatics Algorithms Coursera class and textbook. Advisors: Pavel Pevzner and Phillip Compeau}
 
 \cventry{2011--2012}{Mentor}{We Teach Science}{San Jose, CA}{}{Weekly algebra tutoring to an 8th grader}
 
-\cventry{2011--2012}{Guest Instructor}{XXX High School}{Santa Cruz, CA}{}{Created bioinformatics modules to reinforce biology concepts in high school AP Biology}
+\cventry{2011--2012}{Guest Instructor}{Pacific Collegiate School}{Santa Cruz, CA}{}{Created bioinformatics modules to reinforce biology concepts in high school AP Biology}
 
 \cventry{2012}{Co-Chair}{Intelligent Systems for Molecular Biology Student Council Symposium}{}{Long Beach, CA}{}
 
