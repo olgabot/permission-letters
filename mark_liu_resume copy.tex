@@ -6,7 +6,7 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,letterpaper,serif]{moderncv}
+\documentclass[11pt,a4paper,serif]{moderncv}
 
 \usepackage{verbatim}
 
@@ -23,9 +23,6 @@
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 %\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
 
-\usepackage{multibib}
-\newcites{book,misc}{{Books},{Others}}
-
 
 % personal data
 \firstname{Olga}
@@ -38,7 +35,6 @@
 \email{olgabot@ucsd.edu}                      % optional, remove the line if not wanted
 \social[twitter]{olgabot}                             % optional, remove / comment the line if not wanted
 \social[github]{olgabot}                              % optional, remove / comment the line if not wanted
-% \quote{I have not failed. I have just found 10,000 ways that won't work.}                                 % optional, remove / comment the line if not wanted
 
 %\extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
 
@@ -55,8 +51,8 @@
 \maketitle
 
 \section{Education}
-\cventry{2012--Present}{Ph.D., Bioinformatics and Systems Biology}{University of California, San Diego}{La Jolla, CA}{}{Thesis: Computational analysis of single-cell alternative splicing. Advisor: Gene Yeo} % arguments 3 to 6 can be left empty
-\cventry{2012}{M.S., Bioinformatics and Biomolecular Engineering}{University of California, Santa Cruz}{Santa Cruz, CA}{}{Advisor: Nader Pourmand}
+\cventry{2012--Present}{Ph.D., Bioinformatics and Systems Biology}{University of California, San Diego}{La Jolla, CA}{Thesis: Computational analysis of single-cell alternative splicing. Advisor: Gene Yeo}{} % arguments 3 to 6 can be left empty
+\cventry{2012}{M.S., Bioinformatics and Biomolecular Engineering}{University of California, Santa Cruz}{Santa Cruz, CA}{Advisor: Nader Pourmand}{}
 % \cvline{advisor:}{\small Professor Nader Pourmand}
 \cventry{2010}{S.B., Biological Engineering}{Massachusetts Institute of Technology}{Cambridge, MA}{}{}
 \cventry{2010}{S.B., Mathematics}{Massachusetts Institute of Technology}{Cambridge, MA}{}{}
@@ -66,55 +62,24 @@
 
 \section{Research Positions}
 
-\cventry{2013--Present}{Gene Yeo Laboratory}{Sanford Consortium for Regenerative Medicine}{La Jolla, CA}{}{Collaborated with wet-lab researchers to analyze single-cell motor neuron differentiation mRNA-seq data. Independently developed several software packages written in Python for alternative splicing analyses}
-
-\cventry{2012--2013}{Research Rotations}{University of California, San Diego}{La Jolla, CA}{}{Worked in Profs. Trey Ideker, Gene Yeo, and Pavel Pevzner’s laboratories}
-
-\cventry{2012}{Nader Pourmand Laboratory}{University of California, Santa Cruz}{Santa Cruz, CA}{}{Developed pipeline to analyze RNA-Seq data, applied to single-cell analysis of breast cancer drug resistance to paclitaxel}
-
-\cventry{2010--2011}{Jill Mesirov Laboratory}{Broad Institute of Harvard and MIT}{Cambridge, MA}{}{Created REVEALER algorithm to unveil candidate oncogenic activators}
-
-\cventry{2010}{Sebastian Seung Laboratory}{MIT Department of Brain and Cognitive Sciences}{Cambridge, MA}{}{Computed directionality of neurons in electron microscopy of rabbit retina inner plexiform layer slices}
-
-\cventry{2009}{David Gifford Laboratory}{MIT Computer Science and Artificial Intelligence Laboratory}{Cambridge, MA}{}{Tested whether measures of information flow can predict gene lethality in different genomic networks}
-
-\cventry{2008}{Sean Eddy Laboratory}{Howard Hughes Medical Institute Janelia Farm Research Campus}{Ashburn, VA}{}{Improved protein homology search by creating a better null homology model with Hidden Markov Models}
-
-\cventry{2007}{Martha Bulyk Laboratory}{Brigham and Women's Hospital, Division of Genetics}{Ashburn, VA}{}{Analyzed DNA binding specificities of mouse homeodomain transcription factors}
-
-
-
-
 \section{Honors and Awards}
 
 \cvline{2016}{100 Awesome Women In The Open-Source Community You Should Know, sourced.com}
 \cvline{2014}{NumFocus John Hunter Technical Fellowship}
-\cvline{2013--2016}{National Defense Science and Engineering Graduate Fellowship}
-\cvline{2013}{Fannie and John Hertz Foundation Fellowship Finalist}
-\cvline{2012}{National Science Foundation Graduate Research Fellowship: Honorable Mention}
-\cvline{2012}{University of California Regents Scholarship}
-\cvline{2009}{Bernard M. Gordon-MIT Engineering Leadership Program}
-\cvline{2008}{Howard Hughes Medical Institute Janelia Farm Research Summer Scholar}
+\cvline{2012}{National Defense Science and Engineering Graduate Fellowship}
+\cvline{2012}{Fannie and John Hertz Foundation Fellowship Finalist}
 
-\section{Publications}
-
-
-% Add book with Pavel and Philip
-% Developed interactive curriculum for online Bioinformatics Algorithms Coursera class
+% \section{Publications}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
 %  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
 % Publications from a BibTeX file using the multibib package
-% \section{Publications}
-
-
-
-
+\section{Publications}
 % \nocitebook{book1,book2}
 % \bibliographystylebook{plain}
 % \bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
@@ -122,57 +87,19 @@
 % \bibliographystylemisc{plain}
 % \bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
+\section{Teaching and Leadership}
 
-\section{Talks}
 
-\cventry{2016}{}{Festival of Genomics California}{San Diego Convention Center}{San Diego, CA}{}
-\cventry{2016}{}{Fluidigm User Group Meeting}{City of Hope Hospital}{Los Angeles, CA}{}
-
-\section{Teaching, Outreach, and Leadership}
-
-% \cventry{year--year}{Job title}{Employer}{City}{}{Description}
-
-\cventry{2016}{Teaching Assistant}{Cold Spring Harbor Laboratories}{Cold Spring Harbor, NY}{}{
-Developed and led bioinformatics coursework of \emph{Single Cell Analysis Course} including alignment, machine learning, Python, and basic command line tools to an audience largely with little to no programming experience. Course materials available at \url{http://github.com/YeoLab/single-cell-bioinformatics}
+\cventry{2016}{Teaching Assistant}{Single Cell Analysis Course}{Cold Spring Harbor Laboratories}{Cold Spring Harbor, NY}{
+Developed and led bioinformatics coursework including alignment, machine learning, Python, and basic command line tools to an audience largely with little to no programming experience. Course materials available at \url{http://github.com/YeoLab/single-cell-bioinformatics}
 }
+
+\cventry{2015-2016}{President and Co-Founder}{Graduate Bioinformatics Council}{La Jolla, CA}{
+asdfasf
+}{}
 
 \cventry{2016}{Guest Instructor}{Quantitative Methods in Genetics and Genomics}{La Jolla, CA}{
-}{Taught three weeks of \texttt{git}, RNA-seq and analysis methods to graduate-level UCSD course of 30 students, mostly with limited programming experience}
-
-\cventry{2015--2016}{Speaker and Co-Organizer}{CodeNeuro}{New York, NY and San Francisco, CA}{}{
-Presented \texttt{flotilla} software, taught ``coding for neuroscientists'' tutorial (\url{http://github.com/codeneuro/gitgoing}), and advanced data analysis tutorial}
-
-\cventry{2015--2016}{President and Co-Founder}{Graduate Bioinformatics Council}{La Jolla, CA}{}{
-Founded graduate student council organization for UCSD Bioinformatics and Systems Biology Program. Advocated for student voices, organized ``town hall'' meetings, social hours, fellowhsip peer review, and led a team of eight vice presidents and representatives.
-}
-
-\cventry{2013--2016}{Volunteer}{San Diego Science and Engineering Festival}{San Diego, CA}{}{Developed and demonstrated bioinformatics modules to ages 2-18 at UCSD Bioinformatics booth.}
-
-\cventry{2013--2014}{Instructor}{Bioinformatics Algorithms}{Coursera.org}{}{Developed interactive curriculum for online Bioinformatics Algorithms Coursera class and textbook. Advisors: Pavel Pevzner and Phillip Compeau}
-
-\cventry{2011--2012}{Mentor}{We Teach Science}{San Jose, CA}{}{Weekly algebra tutoring to an 8th grader}
-
-\cventry{2011--2012}{Guest Instructor}{XXX High School}{Santa Cruz, CA}{}{Created bioinformatics modules to reinforce biology concepts in high school AP Biology}
-
-\cventry{2012}{Co-Chair}{Intelligent Systems for Molecular Biology Student Council Symposium}{}{Long Beach, CA}{}
-
-\cventry{2012}{Instructor}{Minority Access to Research Careers}{Santa Cruz, CA}{}{Taught inquiry-based stem cell bioinformatics curriculum to undergraduate researchers}
-
-\section{Software}
-\cvitem{\texttt{anchor}}{Categorizes alternative splicing data into ``modes''– bimodal, unimodal, or uniform. \url{http://github.com/YeoLab/anchor}}
-\cvline{\texttt{bonvoyage}}{Transforms 1d splicing profiles into 2d space to maximize interpretability of change in signal. \url{http://github.com/YeoLab/bonvoyage}}
-
-\cvline{\texttt{flotilla}}{All-in-one package to perform machine learning analyses on large-scale molecular profiling datasets such as gene expression and alternative splicing. \url{http://github.com/YeoLab/flotilla}}
-
-\cvline{\texttt{kvector}}{Calculates $k$-mers in DNA, transforms position weight matrices (PWMs) to $k$-mer vectors. \url{http://github.com/olgabot/kvector}}
-
-\cvline{\texttt{outrigger}}{Fast \emph{De novo} alternative exon detection and quantification. \url{http://github.com/YeoLab/outrigger}}
-
-\cvline{\texttt{poshsplice}}{Annotates alternative splicing events with biological features such as translated protein product. \url{http://github.com/olgabot/poshsplice}}
-
-\cvline{\small\texttt{prettyplotlib}}{Painlessly create beautiful \texttt{matplotlib} plots. \url{http://github.com/olgabot/prettyplotlib}}
-
-\cvline{\texttt{seaborn}}{Contributor, wrote clustered heatmap classes and function. \url{http://github.com/mwaskom/seaborn}}
+asdfads}{}
 
 % \cventry{2012--Present}{Developer, Product Lead}{PACE Systems}{Naperville, IL}{}{
 % Built a scheduling system (\url{http://pacescheduler.com/}) for Fire Departments to schedule and manage their employees.
