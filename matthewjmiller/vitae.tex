@@ -1,0 +1,388 @@
+\documentclass[10pt]{article}
+\usepackage{charter}
+\usepackage{fullpage}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{ifthen}
+\usepackage[resetlabels]{multibib}
+%\usepackage[openbib,ManyBibs]{currvita}
+\usepackage[ManyBibs]{currvita}
+%\usepackage{currvita}
+
+\newboolean{doResearchInterests}
+%\setboolean{doResearchInterests}{true}
+\setboolean{doResearchInterests}{false}
+
+\newcites{refpaper}{foo}
+\newcites{unrefpaper}{foo}
+\newcites{journal}{foo}
+\newcites{techreport}{foo}
+\newcites{submitpaper}{foo}
+\newcites{classproject}{foo}
+
+% Better for lists with 1-2 items and short descriptions
+\newenvironment{sublist}{%
+    \begin{list}{}{%
+        \setlength{\itemsep}{0em}\setlength{\parsep}{0em}%
+        \setlength{\topsep}{0em}\setlength{\parskip}{0em}%
+    }%
+}%
+{ \end{list} }
+
+% Better for lists with more than 2 items and/or long descriptions
+\newenvironment{subbulletlist}{%
+    \begin{list}{\labelitemii}{%
+        \setlength{\topsep}{\itemsep}\setlength{\parskip}{\parsep}%
+    }%
+}%
+{ \end{list} }
+
+\begin{document}
+
+\bibliographystyle{unsrt}
+\bibliographystylerefpaper{unsrt}
+\bibliographystyleunrefpaper{unsrt}
+\bibliographystylesubmitpaper{unsrt}
+\bibliographystylejournal{unsrt}
+\bibliographystyletechreport{unsrt}
+\bibliographystyleclassproject{ieeetr}
+
+\newlength{\oldcvlabelwidth}
+\renewcommand*{\cvbibname}{}
+
+\begin{cv}{Matthew J. Miller\\{\large \itshape Curriculum Vitae}}
+
+\begin{cvlist}{Contact}
+    \item
+    Apex, NC
+    \item Phone: Available Upon Request (please email me)
+    %\\ Fax: 217-244-5685
+    \item \href{mailto:matt@matthewjmiller.net}{matt@matthewjmiller.net}
+    \item \href{http://www.matthewjmiller.net/}
+    {www.matthewjmiller.net}
+\end{cvlist}
+
+\begin{cvlist}{Employment}
+    \item[1/2007--present] Software Engineer\\
+    Cisco Systems\\
+    Research Triangle Park, NC
+    \item[1/2003--9/2005] Research Assistant\\
+    Coordinated Science Laboratory, University of Illinois at 
+    Urbana-Champaign\\
+    Urbana, IL
+%    \item[1/1998--12/1998] Electrical Engineering Co-op 
+%    (\textit{tenure excluded summer months})\\
+%    Michelin, North America\\
+%    Greenville, SC
+\end{cvlist}
+
+\begin{cvlist}{Education}
+    \item \emph{Ph.D., Computer Science}, December 2006\\
+    University of Illinois at Urbana-Champaign\\
+    Urbana, IL
+    \begin{sublist}
+        \item Thesis: \textit{Energy Efficiency and Security
+        for Multihop Wireless Networks}
+        \item Adviser: Prof. Nitin H. Vaidya
+        \item Committee: Prof. Klara Nahrstedt, Prof. Jennifer Hou,
+        and Prof. Indranil Gupta
+        \item GPA: 3.94/4.0
+    \end{sublist}
+    \item \emph{M.S., Computer Science}, December 2003\\ 
+    University of Illinois at Urbana-Champaign\\
+    Urbana, IL
+    \begin{sublist}
+        \item Thesis: \textit{Minimizing Energy Consumption in Sensor
+        Networks Using a Wakeup Radio}
+        \item Adviser: Prof. Nitin H. Vaidya
+    \end{sublist}
+    \item \emph{B.S., Computer Engineering}, May 2001\\
+    Clemson University\\
+    Clemson, SC
+    \begin{sublist}
+        \item GPA: 4.0/4.0
+        \item Minors: \emph{Computer Science} and \emph{Mathematics}
+    \end{sublist}
+\end{cvlist}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Industry Experience}
+    \item \textbf{Cisco Systems}
+    \begin{subbulletlist}
+        \item IOS developer for 7600 router and SIP-400 linecard
+        platforms.
+        \item Helped implement core dump feature which was a finalist
+        for a Reliability, Availability, and Serviceability (RAS) Award
+        within business unit.
+        \item Sustaining for 7600 IP routing platform code.
+        Consistently resolved the most bugs in the group.
+        \item Involved in troubleshooting several high profile
+        customer cases.
+        \item Reviewer for external proposals for Cisco Research.
+        \item Served multiple times as a Cisco judge for Duke
+        University's graduate networking project class.
+    \end{subbulletlist}
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+%\enlargethispage{0.4in}
+%\vspace{-0.5in}
+
+\begin{cvlist}{Honors}
+\item%[8/2004--present] 
+    \emph{US National Science Foundation Fellowship}
+    \begin{sublist}
+    \item Awarded in 2001
+    \item Acceptance Percentage: 16.2\% (903/5560)
+    \end{sublist}
+\item%[8/2001--8/2004] 
+    \emph{ASEE National Defense Science and 
+    Engineering Graduate Fellowship}
+    \begin{sublist}
+    \item Awarded in 2001
+    %\item Acceptance Percentage (2001-2003): 10.2\% (571/5586)
+    \item Acceptance Percentage: 21.3\% (285/1339)
+    \end{sublist}
+\end{cvlist}
+
+%\ifthenelse{\boolean{doResearchInterests}} {
+%\pagebreak
+%}{}
+
+\ifthenelse{\boolean{doResearchInterests}} {
+\begin{cvlist}{Research Interests}
+    %\item \textit{Note: Listed in order of preference.}
+    \item Network security (both Internet and wireless), 
+    %protocol design for wireless devices (e.g., RFIDs and sensors),
+    protocol design for wireless devices,
+    wireless applications,
+    %(particularly focusing on routing and upper layers), 
+    peer-to-peer networks.
+    %, distributed network-centric applications.
+
+%    \item \textbf{Security and Privacy:} I have done work in sensor security.
+%    I am interested in transitioning to network security in
+%    general, both Internet and wireless.
+%    \item \textbf{Wireless Application and Protocol Design:}  I have
+%    an extensive background in multihop wireless networks, particularly
+%    with media access control (MAC) and routing protocols.  I am
+%    interested in protocol design for devices, such as
+%    RFIDs and sensors, that use wireless communications.  In this
+%    domain, I would also like to explore new applications for
+%    wireless and mobile networks and focus more on routing and upper
+%    layers in the network stack.
+%    \item \textbf{Peer-to-Peer Networks:} At the routing layer and
+%    above, there are many parallels between peer-to-peer and multihop 
+%    wireless networks (e.g., limited or no centralized control, finding
+%    data and efficiently routing it, dynamic topologies).  Given my
+%    research background, I would be interested in researching
+%    protocols and system architectures for peer-to-peer networks and, more
+%    generally, network-centric applications that could benefit from
+%    a distributed design.
+\end{cvlist}
+} { 
+}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\renewcommand*{\bibindent}{1.5em}
+% Do bibaddtoleftmargin instead of biblabelsep if you're
+% not using manybib or openbib
+%\renewcommand*{\bibaddtoleftmargin}{1.5em}
+\newcommand*{\biblabelsep}{1.5em}
+% To update, before doing latexmk, run:
+% bibtex journal
+% bibtex refpaper
+% bibtex unrefpaper
+% bibtex techreport
+\begin{cvlist}{Publications}
+    \item \textbf{Journal Papers}
+    \nocitejournal{sengul08adaptive_vitae}
+    \nocitejournal{miller06adhoc_vitae}
+    \nocitejournal{miller04mac_vitae}
+    \bibliographyjournal{vitae}
+    \item \textbf{Conference Papers} 
+    \nociterefpaper{miller07practical_vitae}
+    \nociterefpaper{miller06leveraging_vitae}
+    \nociterefpaper{miller05improving_vitae}
+    \nociterefpaper{miller05exploring_vitae}
+    \nociterefpaper{miller04power_vitae}
+    \nociterefpaper{miller04minimizing_vitae}
+    \bibliographyrefpaper{vitae}
+    %\item \textbf{Unrefereed Conference Papers} 
+    %\nociteunrefpaper{miller04power_vitae}
+    %\bibliographyunrefpaper{vitae}
+
+    \ifthenelse{\boolean{doResearchInterests}} {} {
+    \pagebreak
+    }
+
+    \item \textbf{Submitted Papers} 
+    \nocitesubmitpaper{miller05using_vitae}
+    \bibliographysubmitpaper{vitae}
+
+    \item \textbf{Technical Reports} 
+    \nocitetechreport{miller05errata_vitae}
+    \nocitetechreport{miller04ondemand_vitae}
+    %\nocitetechreport{miller03thesis}
+    \nocitetechreport{miller03hybrid_vitae}
+    \bibliographytechreport{vitae}
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Research Experience}
+    \item \textbf{Graduate Work}
+    \begin{sublist}
+        \item 
+        My work focuses on \textit{security} and \textit{energy efficiency}
+        in wireless
+        multihop networks, particularly sensor networks.  In the
+        security domain, I proposed a key distribution protocol to
+        provide symmetric, pairwise keys that, with high
+        probability, are unknown to eavesdroppers.  This was the first
+        work to use the underlying wireless channel diversity
+        to address this problem.  In the energy efficiency domain, most
+        power save protocols use static sleeping and listening intervals
+        regardless of the network environment.  My work looks at
+        adaptively adjusting these intervals in response to
+        network traffic.  Additionally, I have proposed methods of using
+        carrier sensing to further improve the energy efficiency of
+        power save protocols and a lightweight protocol to address the
+        energy-latency tradeoff for broadcast dissemination in sensor
+        networks.
+%        Some issues I
+%        have investigated include key distribution using multiple
+%        channels, efficient broadcast in networks using power save
+%        protocols, energy-conserving techniques for listening
+%        in sleep scheduling
+%        protocols, adjusting wake-up schedules based on traffic
+%        patterns, and routing metrics to address energy-latency
+%        trade-offs.
+%        Focus is on the design and simulation of power save
+%        protocols in wireless ad-hoc network, especially sensor
+%        networks.  We are investigating many issues including
+%        coordinating awake times between neighbors, adjusting wake-up
+%        schedules based on traffic patterns, assigning channels for
+%        waking up neighbors, using multiple power save
+%        protocols in a network, and improving IEEE 802.11's ATIM mechanism.
+    \end{sublist}
+
+    \item \textbf{Graduate Class Projects}
+    \begin{subbulletlist}
+        \item \textit{Exploring the Energy-Latency Trade-off of Broadcasts
+        in IEEE 802.11 Power Save Networks}\\
+        Joint work with Cigdem Sengul in Fall 2003.  
+        Designed, analyzed, simulated, and evaluated (using \textit{ns-2}) 
+        a protocol for power save networks and the 
+        impact of its parameters on energy and latency.  Selected by the
+        professor as one of the three best two-person projects in the
+        class.  Published in IEEE ICDCS 2005.
+        \item \textit{Improving Fault Tolerance in AODV}\\
+        Joint work with Jungmin So in Fall 2002.  Designed, simulated,
+        and evaluated (using \textit{ns-2})
+        techniques to maintain multiple routes in an ad-hoc routing protocol.
+        \item \textit{Improving Connectivity in a Scatternet Formation
+        Algorithm}\\
+        Joint work with Cristina L. Abad in Spring 2002.  Designed,
+        simulated, and evaluated (using a custom built simulator written
+        in C) a protocol to provide greater
+        connectivity in Bluetooth scatternet formation. 
+        \item \textit{Log Correlation for Intrusion Detection}\\
+        Group project in Spring 2003.  Investigated how information 
+        from various system
+        logs can be used to identify specific attacks.  Subsequent work 
+        by some group members led to a publication based on the
+        project:  
+        \renewcommand*{\biblabelsep}{1.5em}
+        \nociteclassproject{abad03log}
+        \bibliographyclassproject{vitae}
+        \item \textit{Tools for Middle School Students to Create Vignettes}\\
+        Joint work with Jeffrey Naisbitt and Naomi Caldwell in Spring
+        2003.  Designed, implemented, and did user-testing on a
+        tool (using Java Swing) to allow students to create life 
+        stories using an instant messenger-like interface.
+    \end{subbulletlist}
+    \item \textbf{Awards}
+    \begin{subbulletlist}
+        \item NSF Student Travel Grant (US \$500) for IEEE BROADNETS 2004 
+        \item NSF Student Travel Grant (US \$750) for ACM SenSys 2004
+        \item DARPA/NSF Student Travel Grant (US \$400--750) for IEEE MASS 2005
+    \end{subbulletlist}
+    \item \textbf{Undergraduate Work}
+    \begin{subbulletlist}
+        \item Participated in the NSF-funded Summer Undergraduate 
+        Research Experience (SURE) at Clemson University in 1999.
+        \item Worked in Parallel Architecture Research Lab (PARL) 
+        at Clemson University for two years.
+        \item Projects included designing user interfaces (using Java Swing)
+        for scientific
+        computing problem solving environments to allow message passing
+        between modules and array partitioning.
+    \end{subbulletlist}
+    \item \textbf{External Reviewer}
+    \begin{subbulletlist}
+        \item \textit{IEEE Transactions on Mobile Computing}, 
+        \textit{IEEE Transactions on Dependable and 
+        Secure Computing}, 
+        \textit{IEEE Transactions on Wireless Communications}, 
+        \textit{IEEE Transactions on Information Forensics and
+        Security}, and \textit{IEEE Communications Magazine}.
+        \item MobiQuitous 2004, IEEE WCNC 2004, IEEE ICC 2005, 
+        IEEE MASS 2006, and IEEE VTC 2006.
+        \item Cisco Research funding proposals.
+        \item Judge for Duke University Computer Science
+        graduate class projects (2007).
+    \end{subbulletlist}
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+\begin{cvlist}{Memberships}
+    \item[1997--present] Member, Institute of Electrical and
+    Electronics Engineers (IEEE)
+\end{cvlist}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Technical Skills}
+    \item \textbf{Proficient}
+    \begin{sublist}
+        \item C, Python, C++, Java, Perl, LaTeX, Matlab, 
+        \textit{ns-2} Network Simulator (C++ based), TinyOS/TOSSIM
+    \end{sublist}
+    \item \textbf{Familiar} 
+    \begin{sublist}
+        \item Tcl/Tk, ML, Prolog, Lisp, PHP
+    \end{sublist}
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+\begin{cvlist}{Extracurricular}
+    \item[2004--2005] Large Group Coordinator\\
+    UIUC Graduate InterVarsity Christian Fellowship
+    \begin{subbulletlist}
+    \item Responsible for contacting and scheduling about 20 
+    speakers 
+    \item Responsible for arranging facility and equipment
+    reservations
+    \item Helped restructure the chapter budget
+    \end{subbulletlist}
+\end{cvlist}
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Miscellaneous}
+\item \textit{Citizenship:} United States of America
+\item \textit{Marital Status:} Married
+\item \textit{Erd\"{o}s Number:} $\leq 4$
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+%\begin{cvlist}{References}
+%\item Available upon request
+%\item See attached sheets
+%\end{cvlist}
+
+\end{cv}
+\end{document}
+

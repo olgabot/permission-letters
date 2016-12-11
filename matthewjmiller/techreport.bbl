@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{miller05errata_vitae}
+{\textbf{Matthew J. Miller}}.
+\newblock {An Errata for \textit{Delay Efficient Sleep Scheduling in Wireless
+  Sensor Networks}}.
+\newblock Technical report, University of Illinois at Urbana-Champaign,
+  September 2005.
+
+\bibitem{miller04ondemand_vitae}
+{\textbf{Matthew J. Miller}} and Nitin~H. Vaidya.
+\newblock {On-Demand TDMA Scheduling for Energy Conservation in Sensor
+  Networks}.
+\newblock Technical report, University of Illinois at Urbana-Champaign, June
+  2004.
+
+\bibitem{miller03hybrid_vitae}
+{\textbf{Matthew J. Miller}}, William~D. List, and Nitin~H. Vaidya.
+\newblock {A Hybrid Network Implementation to Extend Infrastructure Reach}.
+\newblock Technical report, University of Illinois at Urbana-Champaign, 2003.
+
+\end{thebibliography}
