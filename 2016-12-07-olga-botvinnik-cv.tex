@@ -17,7 +17,7 @@
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 
-% \usepackage[backend=biber,style=numeric-comp,
+% \usepackage[style=numeric-comp,
 % sorting=none,defernumbers=true]{biblatex}%mod.
 % \DeclareBibliographyCategory{cited}
 % \AtEveryCitekey{\addtocategory{cited}{\thefield{entrykey}}}
@@ -45,6 +45,9 @@
 % }%
 % }
 % \makeauthorbold{Botvinnik}
+
+% BibTeX - don't print the year for publications that are "in press"
+\newcommand{\dontprintyear}[1]{}
 
 
 % personal data
@@ -146,9 +149,12 @@
 
 % --- START For use with BibTeX, not BibLaTeX .... ---
 \nocite{*}
-\bibliographystyle{plainolga}
+\bibliographystyle{habbrvyr}
 % \biblographystyle{plain}
 \bibliography{publications}                    % 'publications' is the name of a BibTeX file
+
+% \bibliography{books}
+% \nocite{*}  
 % ---- END for use with bibtex ----
 
 

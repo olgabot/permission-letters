@@ -1,48 +1,57 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: 2016-12-07-olga-botvinnik-cv.aux
-The style file: plainolga.bst
+The style file: habbrvyr.bst
+Illegal, another \bibdata command---line 29 of file 2016-12-07-olga-botvinnik-cv.aux
+ : \bibdata
+ :         {books}
+I'm skipping whatever remains of this command
+Multiple inclusions of entire database
+---line 39 of file 2016-12-07-olga-botvinnik-cv.aux
+ : \citation{*
+ :            }
+I'm skipping whatever remains of this command
 Database file #1: publications.bib
-Warning--empty year in songbotvinnik2016
-You've used 6 entries,
-            2151 wiz_defined-function locations,
-            547 strings with 6009 characters,
-and the built_in function-call counts, 3400 in all, are:
-= -- 309
-> -- 288
-< -- 0
-+ -- 114
-- -- 108
-* -- 307
-:= -- 562
-add.period$ -- 18
-call.type$ -- 6
-change.case$ -- 69
+Warning--empty journal in songbotvinnik2016
+You've used 7 entries,
+            2184 wiz_defined-function locations,
+            558 strings with 6178 characters,
+and the built_in function-call counts, 3569 in all, are:
+= -- 302
+> -- 324
+< -- 1
++ -- 127
+- -- 120
+* -- 323
+:= -- 666
+add.period$ -- 24
+call.type$ -- 7
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 124
-empty$ -- 143
-format.name$ -- 108
-if$ -- 622
+cite$ -- 8
+duplicate$ -- 84
+empty$ -- 174
+format.name$ -- 120
+if$ -- 664
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 33
-num.names$ -- 12
-pop$ -- 63
+int.to.str$ -- 7
+missing$ -- 8
+newline$ -- 41
+num.names$ -- 21
+pop$ -- 82
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 68
 quote$ -- 0
-skip$ -- 92
+skip$ -- 59
 stack$ -- 0
-substring$ -- 104
-swap$ -- 12
-text.length$ -- 0
+substring$ -- 109
+swap$ -- 8
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
+type$ -- 26
 warning$ -- 1
-while$ -- 18
-width$ -- 7
-write$ -- 65
-(There was 1 warning)
+while$ -- 27
+width$ -- 8
+write$ -- 83
+(There were 2 error messages)
