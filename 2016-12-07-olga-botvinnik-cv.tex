@@ -29,8 +29,10 @@
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 %\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
 
-% \usepackage{multibib}
-% \newcites{book,misc}{{Books},{Others}}
+% --- Begin use with Multibib ----
+\usepackage{multibib}
+\newcites{book,journal,poster}{{Books},{Journal Articles},{Conference Posters}}
+% --- END use with Multibib ---
 
 % \newcommand{\makeauthorbold}[1]{%
 % \DeclareNameFormat{author}{%
@@ -61,6 +63,7 @@
 \email{olgabot@ucsd.edu}                      % optional, remove the line if not wanted
 \social[twitter]{olgabot}                             % optional, remove / comment the line if not wanted
 \social[github]{olgabot}                              % optional, remove / comment the line if not wanted
+\date{\today}
 % \quote{I have not failed. I have just found 10,000 ways that won't work.}                                 % optional, remove / comment the line if not wanted
 
 %\extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
@@ -103,7 +106,7 @@
 
 \cventry{2008}{Sean Eddy Laboratory}{Howard Hughes Medical Institute Janelia Farm Research Campus}{Ashburn, VA}{}{Improved protein homology search by creating a better null homology model with Hidden Markov Models}
 
-\cventry{2007}{Martha Bulyk Laboratory}{Brigham and Women's Hospital, Division of Genetics}{Ashburn, VA}{}{Analyzed DNA binding specificities of mouse homeodomain transcription factors}
+\cventry{2007}{Martha Bulyk Laboratory}{Brigham and Women's Hospital, Division of Genetics}{Boston, MA}{}{Analyzed DNA binding specificities of mouse homeodomain transcription factors}
 
 
 
@@ -111,7 +114,7 @@
 \section{Honors and Awards}
 
 \cvline{2016}{100 Awesome Women In The Open-Source Community You Should Know, sourced.com}
-\cvline{2014}{NumFocus John Hunter Technical Fellowship}
+\cvline{2014}{NumFocus John Hunter Technical Fellowship for Open Source Science}
 \cvline{2013--2016}{National Defense Science and Engineering Graduate Fellowship}
 \cvline{2013}{Fannie and John Hertz Foundation Fellowship Finalist}
 \cvline{2012}{National Science Foundation Graduate Research Fellowship: Honorable Mention}
@@ -148,32 +151,42 @@
 % ---- END for use with biblatex ----
 
 % --- START For use with BibTeX, not BibLaTeX .... ---
-\nocite{*}
-\bibliographystyle{habbrvyr}
-% \biblographystyle{plain}
-\bibliography{publications}                    % 'publications' is the name of a BibTeX file
+% \nocite{*}
+% \bibliographystyle{habbrvyr}
+% % \biblographystyle{plain}
+% \bibliography{publications}                    % 'publications' is the name of a BibTeX file
 
-% \bibliography{books}
-% \nocite{*}  
+% % \nocite{*}  
+% % \bibliographystyle{habbrvyr}
+% % \bibliography{books}
 % ---- END for use with bibtex ----
 
 
 % --- START for use with multibib package ---
 % Publications from a BibTeX file using the multibib package
-% \section{Publications}
+\section{Publications}
 
-% \nocitebook{book1,book2}
-% \bibliographystylebook{plain}
-% \bibliographybook{example}                   % 'example' is the name of a BibTeX file
-% \nocitemisc{misc1,misc2,misc3}
-% \bibliographystylemisc{plain}
-% \bibliographymisc{example}                   % 'example' is the name of a BibTeX file
+% \nocitebook{Compeau:woKZa7_-}
+\nocitejournal{*}
+\bibliographystylejournal{habbrvyr}
+\bibliographyjournal{articles}                   % 'articles' is the name of a BibTeX file
+
+\nocitebook{*}
+\bibliographystylebook{habbrvyr}
+\bibliographybook{books}                   % 'books' is the name of a BibTeX file
+% \nocitejournal{berger2008variation,wood2012microscale,galili2012prediction,galili2012prediction,galili2011gene,kim2016characterizing,songbotvinnik2016}
+
+\nociteposter{*}
+\bibliographystyleposter{habbrvyr}
+\bibliographyposter{posters}                   % 'articles' is the name of a BibTeX file
 % --- END for use with multibib package ----
 
 \section{Talks}
 
-\cventry{2016}{}{Festival of Genomics California}{San Diego Convention Center}{San Diego, CA}{}
-\cventry{2016}{}{Fluidigm User Group Meeting}{City of Hope Hospital}{Los Angeles, CA}{}
+\cventry{2016}{Festival of Genomics California}{San Diego Convention Center}{San Diego, CA}{}{}
+\cventry{2016}{Fluidigm User Group Meeting}{City of Hope Hospital}{Los Angeles, CA}{}{}
+\cventry{2015}{CodeNeuro}{New Museum}{New York, NY}{}{}
+\cventry{2014}{PyData}{}{New York, NY}{}{}
 
 \section{Teaching, Outreach, and Leadership}
 
