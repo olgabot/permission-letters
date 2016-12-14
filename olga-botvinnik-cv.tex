@@ -14,6 +14,8 @@
 \moderncvstyle{classic}
 \moderncvcolor{blue}
 
+\usepackage{lastpage}
+
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 
@@ -65,6 +67,8 @@
 %----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
+\rfoot{\addressfont\itshape\textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
+
 
 \cvline{}{Research Interests: Molecular and cellular heterogeneity of biological systems}
 
@@ -211,6 +215,12 @@ Founded graduate student council organization for UCSD Bioinformatics and System
 \cventry{2012}{Co-Chair}{Intelligent Systems for Molecular Biology Student Council Symposium}{}{Long Beach, CA}{}
 
 \cventry{2012}{Instructor}{Minority Access to Research Careers}{Santa Cruz, CA}{}{Taught inquiry-based stem cell bioinformatics curriculum to undergraduate researchers}
+\cventry{2011}{Volunteer}{Science Club for Girls}{Cambridge, MA}{}{Co-led after-school biology science club for a class of 16 2nd graders}
+
+\cventry{2009--2011}{Choreographer}{MIT DanceTroupe}{Cambridge, MA}{}{Taught beginner to intermediate hip-hop choreography to fellow students}
+\cventry{2008--2010}{Publicity Chair}{MIT DanceTroupe}{Cambridge, MA}{}{Designed posters and T-shirts to publicize and promote DanceTroupe concert attendance}
+\cventry{2008}{Social Chair}{Baker House}{Cambridge, MA}{}{Organized social events for students, including a popular ``Dormal'' event with catered dinner and jazz performances}
+
 
 \section{Software}
 \cvitem{\texttt{anchor}}{Categorizes alternative splicing data into ``modes''– bimodal, unimodal, or uniform. \url{http://github.com/YeoLab/anchor}}
