@@ -1,48 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: journal.aux
-The style file: habbrvyr.bst
+The style file: habbrvyrolgabold.bst
 Database file #1: articles.bib
-Warning--empty journal in songbotvinnik2016
-You've used 6 entries,
-            2184 wiz_defined-function locations,
-            549 strings with 5858 characters,
-and the built_in function-call counts, 3236 in all, are:
-= -- 271
-> -- 306
+You've used 5 entries,
+            2217 wiz_defined-function locations,
+            554 strings with 5664 characters,
+and the built_in function-call counts, 3111 in all, are:
+= -- 282
+> -- 265
 < -- 0
-+ -- 120
-- -- 114
-* -- 299
-:= -- 608
-add.period$ -- 20
-call.type$ -- 6
-change.case$ -- 69
++ -- 104
+- -- 99
+* -- 275
+:= -- 525
+add.period$ -- 16
+call.type$ -- 5
+change.case$ -- 59
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 70
-empty$ -- 149
-format.name$ -- 114
-if$ -- 596
+cite$ -- 5
+duplicate$ -- 111
+empty$ -- 135
+format.name$ -- 99
+if$ -- 569
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 6
-newline$ -- 35
-num.names$ -- 18
-pop$ -- 73
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 29
+num.names$ -- 15
+pop$ -- 60
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 148
 quote$ -- 0
-skip$ -- 51
+skip$ -- 85
 stack$ -- 0
-substring$ -- 104
-swap$ -- 5
+substring$ -- 99
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
-warning$ -- 1
-while$ -- 24
-width$ -- 7
-write$ -- 69
-(There was 1 warning)
+type$ -- 20
+warning$ -- 0
+while$ -- 21
+width$ -- 6
+write$ -- 58

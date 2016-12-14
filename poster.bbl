@@ -1,7 +1,8 @@
 \begin{thebibliography}{1}
 
 \bibitem{Botvinnik:2016vr}
-O.~B. Botvinnik, Y.~Song, M.~T. Lovci, B.~Kakaradov, J.~L. Xu, and G.~W. Yeo.
+\textbf{\textsc{Olga~B Botvinnik}}, Yan Song, Michael~T Lovci, Boyko Kakaradov,
+  Jia~L Xu, and Gene~W Yeo.
 \newblock {Single-cell alternative splicing analysis using Expedition reveals
   splicing dynamics during neuron differentiation}.
 \newblock In {\em RNA Society}, Kyoto, Japan, June 2016.

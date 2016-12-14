@@ -1,12 +1,14 @@
-cp% BibTeX standard bibliography style `plain'
-   % Version 0.99b (8-Dec-10 release) for BibTeX versions 0.99a or later.
-   % Copyright (C) 1984, 1985, 1988, 2010 Howard Trickey and Oren Patashnik.
-   % Unlimited copying and redistribution of this file are permitted as long as
-   % it is unmodified.  Modifications (and redistribution of modified versions)
-   % are also permitted, but only if the resulting file is renamed to something
-   % besides btxbst.doc, plain.bst, unsrt.bst, alpha.bst, and abbrv.bst.
-   % This restriction helps ensure that all standard styles are identical.
-   % The file btxbst.doc has the documentation for this style.
+% habbrv: adds eprint field (www-admin@xxx.lanl.gov)
+% an extension of:
+% BibTeX standard bibliography style `abbrv'
+        % version 0.99a for BibTeX versions 0.99a or later, LaTeX version 2.09.
+        % Copyright (C) 1985, all rights reserved.
+        % Copying of this file is authorized only if either
+        % (1) you make absolutely no changes to your copy, including name, or
+        % (2) if you do make changes, you name it something other than
+        % btxbst.doc, plain.bst, unsrt.bst, alpha.bst, and abbrv.bst.
+        % This restriction helps ensure that all standard styles are identical.
+        % The file btxbst.doc has the documentation for this style.
 
 ENTRY
   { address
@@ -15,6 +17,7 @@ ENTRY
     chapter
     edition
     editor
+    eprint
     howpublished
     institution
     journal
@@ -251,6 +254,13 @@ FUNCTION {format.title}
 { title empty$
     { "" }
     { title "t" change.case$ }
+  if$
+}
+
+FUNCTION {format.eprint}
+{ eprint empty$
+    { "" }
+    { eprint }
   if$
 }
 
@@ -567,6 +577,7 @@ FUNCTION {article}
       format.pages output
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -599,6 +610,7 @@ FUNCTION {book}
   if$
   format.edition output
   format.date "year" output.check
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -613,6 +625,7 @@ FUNCTION {booklet}
   howpublished output
   address output
   format.date output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -647,6 +660,7 @@ FUNCTION {inbook}
   if$
   format.edition output
   format.date "year" output.check
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -673,6 +687,7 @@ FUNCTION {incollection}
       format.chapter.pages output
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -707,6 +722,7 @@ FUNCTION {inproceedings}
       format.pages output
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -743,6 +759,7 @@ FUNCTION {manual}
   if$
   format.edition output
   format.date output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -758,6 +775,7 @@ FUNCTION {mastersthesis}
   school "school" output.check
   address output
   format.date "year" output.check
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -771,6 +789,7 @@ FUNCTION {misc}
   howpublished new.block.checka
   howpublished output
   format.date output
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -787,6 +806,7 @@ FUNCTION {phdthesis}
   school "school" output.check
   address output
   format.date "year" output.check
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -822,6 +842,7 @@ FUNCTION {proceedings}
       publisher output
     }
   if$
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -837,6 +858,7 @@ FUNCTION {techreport}
   institution "institution" output.check
   address output
   format.date "year" output.check
+  format.eprint output
   new.block
   note output
   fin.entry
@@ -850,18 +872,19 @@ FUNCTION {unpublished}
   new.block
   note "note" output.check
   format.date output
+  format.eprint output
   fin.entry
 }
 
 FUNCTION {default.type} { misc }
 
-MACRO {jan} {"January"}
+MACRO {jan} {"Jan."}
 
-MACRO {feb} {"February"}
+MACRO {feb} {"Feb."}
 
-MACRO {mar} {"March"}
+MACRO {mar} {"Mar."}
 
-MACRO {apr} {"April"}
+MACRO {apr} {"Apr."}
 
 MACRO {may} {"May"}
 
@@ -869,56 +892,56 @@ MACRO {jun} {"June"}
 
 MACRO {jul} {"July"}
 
-MACRO {aug} {"August"}
+MACRO {aug} {"Aug."}
 
-MACRO {sep} {"September"}
+MACRO {sep} {"Sept."}
 
-MACRO {oct} {"October"}
+MACRO {oct} {"Oct."}
 
-MACRO {nov} {"November"}
+MACRO {nov} {"Nov."}
 
-MACRO {dec} {"December"}
+MACRO {dec} {"Dec."}
 
-MACRO {acmcs} {"ACM Computing Surveys"}
+MACRO {acmcs} {"ACM Comput. Surv."}
 
-MACRO {acta} {"Acta Informatica"}
+MACRO {acta} {"Acta Inf."}
 
-MACRO {cacm} {"Communications of the ACM"}
+MACRO {cacm} {"Commun. ACM"}
 
-MACRO {ibmjrd} {"IBM Journal of Research and Development"}
+MACRO {ibmjrd} {"IBM J. Res. Dev."}
 
-MACRO {ibmsj} {"IBM Systems Journal"}
+MACRO {ibmsj} {"IBM Syst.~J."}
 
-MACRO {ieeese} {"IEEE Transactions on Software Engineering"}
+MACRO {ieeese} {"IEEE Trans. Softw. Eng."}
 
-MACRO {ieeetc} {"IEEE Transactions on Computers"}
+MACRO {ieeetc} {"IEEE Trans. Comput."}
 
 MACRO {ieeetcad}
- {"IEEE Transactions on Computer-Aided Design of Integrated Circuits"}
+ {"IEEE Trans. Comput.-Aided Design Integrated Circuits"}
 
-MACRO {ipl} {"Information Processing Letters"}
+MACRO {ipl} {"Inf. Process. Lett."}
 
-MACRO {jacm} {"Journal of the ACM"}
+MACRO {jacm} {"J.~ACM"}
 
-MACRO {jcss} {"Journal of Computer and System Sciences"}
+MACRO {jcss} {"J.~Comput. Syst. Sci."}
 
-MACRO {scp} {"Science of Computer Programming"}
+MACRO {scp} {"Sci. Comput. Programming"}
 
-MACRO {sicomp} {"SIAM Journal on Computing"}
+MACRO {sicomp} {"SIAM J. Comput."}
 
-MACRO {tocs} {"ACM Transactions on Computer Systems"}
+MACRO {tocs} {"ACM Trans. Comput. Syst."}
 
-MACRO {tods} {"ACM Transactions on Database Systems"}
+MACRO {tods} {"ACM Trans. Database Syst."}
 
-MACRO {tog} {"ACM Transactions on Graphics"}
+MACRO {tog} {"ACM Trans. Gr."}
 
-MACRO {toms} {"ACM Transactions on Mathematical Software"}
+MACRO {toms} {"ACM Trans. Math. Softw."}
 
-MACRO {toois} {"ACM Transactions on Office Information Systems"}
+MACRO {toois} {"ACM Trans. Office Inf. Syst."}
 
-MACRO {toplas} {"ACM Transactions on Programming Languages and Systems"}
+MACRO {toplas} {"ACM Trans. Prog. Lang. Syst."}
 
-MACRO {tcs} {"Theoretical Computer Science"}
+MACRO {tcs} {"Theoretical Comput. Sci."}
 
 READ
 
@@ -949,7 +972,7 @@ FUNCTION {sort.format.names}
         { "   " * }
         'skip$
       if$
-      s nameptr "{vv{ } }{ll{ }}{  ff{ }}{  jj{ }}" format.name$ 't :=
+      s nameptr "{vv{ } }{ll{ }}{  f{ }}{  jj{ }}" format.name$ 't :=
       nameptr numnames = t "others" = and
         { "et al" * }
         { t sortify * }
@@ -969,6 +992,19 @@ FUNCTION {sort.format.title}
   chop.word
   sortify
   #1 global.max$ substring$
+}
+
+FUNCTION {year.sort}
+{ year empty$
+    { key empty$
+        { "to sort, need year or key in " cite$ * warning$
+          ""
+        }
+        { key sortify }
+      if$
+    }
+    { year sort.format.names }
+  if$
 }
 
 FUNCTION {author.sort}
@@ -1044,7 +1080,7 @@ FUNCTION {presort}
         'editor.organization.sort
         { type$ "manual" =
             'author.organization.sort
-            'author.sort
+            'year.sort
           if$
         }
       if$
@@ -1052,7 +1088,8 @@ FUNCTION {presort}
   if$
   "    "
   *
-  year field.or.null sortify
+  author field.or.null
+  sort.format.names
   *
   "    "
   *
@@ -1063,7 +1100,7 @@ FUNCTION {presort}
   'sort.key$ :=
 }
 
-ITERATE {presort}
+REVERSE {presort}
 
 SORT
 
@@ -1090,7 +1127,7 @@ FUNCTION {longest.label.pass}
 
 EXECUTE {initialize.longest.label}
 
-ITERATE {longest.label.pass}
+REVERSE {longest.label.pass}
 
 FUNCTION {begin.bib}
 { preamble$ empty$
@@ -1104,7 +1141,7 @@ EXECUTE {begin.bib}
 
 EXECUTE {init.state.consts}
 
-ITERATE {call.type$}
+REVERSE {call.type$}
 
 FUNCTION {end.bib}
 { newline$

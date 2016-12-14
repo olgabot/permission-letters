@@ -1,5 +1,6 @@
 
-TEX_NAME = 2016-12-07-olga-botvinnik-cv
+TEX_NAME = olga-botvinnik-cv
+PDF_NAME = ${TEX_NAME}-`date +%Y-%M`
 
 all:
 	latex ${TEX_NAME}.tex
@@ -10,7 +11,7 @@ all:
 	bibtex poster
 	latex ${TEX_NAME}.tex
 	latex ${TEX_NAME}.tex
-	dvips -t letter -Ppdf ${TEX_NAME}.dvi -o ${TEX_NAME}.ps
+	dvips -t letter -Ppdf ${TEX_NAME}.dvi -o ${PDF_NAME}.ps
 	# Comment out the next line if you want to create a PDF
-	ps2pdf ${TEX_NAME}.ps ${TEX_NAME}.pdf
+	ps2pdf ${PDF_NAME}.ps ${PDF_NAME}.pdf
 

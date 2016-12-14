@@ -34,20 +34,6 @@
 \newcites{book,journal,poster}{{Books},{Journal Articles},{Conference Posters}}
 % --- END use with Multibib ---
 
-% \newcommand{\makeauthorbold}[1]{%
-% \DeclareNameFormat{author}{%
-%   \ifnumequal{\value{listcount}}{1}
-%     {\ifnumequal{\value{liststop}}{1}
-%       {\expandafter\ifstrequal{##1}{#1}{\textbf{##1\addcomma\addspace ##4\addcomma\isdot}}{##1\addcomma\addspace ##4\addcomma\isdot}}
-%       {\expandafter\ifstrequal{##1}{#1}{\textbf{##1\addcomma\addspace ##4}}{##1\addcomma\addspace ##4}}}
-%     {\ifnumless{\value{listcount}}{\value{liststop}}
-%       {\expandafter\ifstrequal{##1}{#1}{\textbf{\addcomma\addspace ##1\addcomma\addspace ##4}}{\addcomma\addspace ##1\addcomma\addspace ##4}}
-%       {\expandafter\ifstrequal{##1}{#1}{\textbf{\addcomma\addspace ##1\addcomma\addspace ##4\addcomma\isdot}}{\addcomma\addspace ##1\addcomma\addspace ##4\addcomma\isdot}}%
-%     }%
-% }%
-% }
-% \makeauthorbold{Botvinnik}
-
 % BibTeX - don't print the year for publications that are "in press"
 \newcommand{\dontprintyear}[1]{}
 
@@ -63,8 +49,8 @@
 \email{olgabot@ucsd.edu}                      % optional, remove the line if not wanted
 \social[twitter]{olgabot}                             % optional, remove / comment the line if not wanted
 \social[github]{olgabot}                              % optional, remove / comment the line if not wanted
-\date{\today}
-% \quote{I have not failed. I have just found 10,000 ways that won't work.}                                 % optional, remove / comment the line if not wanted
+% \date{\today}
+\quote{\today}                                 % optional, remove / comment the line if not wanted
 
 %\extrainfo{\url{http://markliu.me}} % optional, remove the line if not wanted
 
@@ -73,15 +59,18 @@
 %\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 %\makeatother
 
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
 \maketitle
 
+\cvline{}{Research Interests: Molecular and cellular heterogeneity of biological systems}
+
+
 \section{Education}
-\cventry{2012--Present}{Ph.D., Bioinformatics and Systems Biology}{University of California, San Diego}{La Jolla, CA}{}{Thesis: Computational analysis of single-cell alternative splicing. Advisor: Gene Yeo} % arguments 3 to 6 can be left empty
+\cventry{2012--Present}{Ph.D. Candidate, Bioinformatics and Systems Biology}{University of California, San Diego}{La Jolla, CA}{}{Thesis: Computational analysis of single-cell alternative splicing. Advisor: Gene Yeo} % arguments 3 to 6 can be left empty
 \cventry{2012}{M.S., Bioinformatics and Biomolecular Engineering}{University of California, Santa Cruz}{Santa Cruz, CA}{}{Advisor: Nader Pourmand}
 % \cvline{advisor:}{\small Professor Nader Pourmand}
 \cventry{2010}{S.B., Biological Engineering}{Massachusetts Institute of Technology}{Cambridge, MA}{}{}
@@ -92,7 +81,7 @@
 
 \section{Research Positions}
 
-\cventry{2013--Present}{Gene Yeo Laboratory}{Sanford Consortium for Regenerative Medicine}{La Jolla, CA}{}{Collaborated with wet-lab researchers to analyze single-cell motor neuron differentiation mRNA-seq data. Independently developed several software packages written in Python for alternative splicing analyses}
+\cventry{2013--Present}{Gene Yeo Laboratory}{University of California, San Diego}{La Jolla, CA}{}{Collaborated with wet-lab researchers to analyze single-cell motor neuron differentiation mRNA-seq data. Independently developed several software packages written in Python for alternative splicing analyses}
 
 \cventry{2012--2013}{Research Rotations}{University of California, San Diego}{La Jolla, CA}{}{Worked in Profs. Trey Ideker, Gene Yeo, and Pavel Pevzner’s laboratories}
 
@@ -168,16 +157,16 @@
 
 % \nocitebook{Compeau:woKZa7_-}
 \nocitejournal{*}
-\bibliographystylejournal{habbrvyr}
+\bibliographystylejournal{habbrvyrolgabold}
 \bibliographyjournal{articles}                   % 'articles' is the name of a BibTeX file
 
 \nocitebook{*}
-\bibliographystylebook{habbrvyr}
+\bibliographystylebook{habbrvyrolgabold}
 \bibliographybook{books}                   % 'books' is the name of a BibTeX file
 % \nocitejournal{berger2008variation,wood2012microscale,galili2012prediction,galili2012prediction,galili2011gene,kim2016characterizing,songbotvinnik2016}
 
 \nociteposter{*}
-\bibliographystyleposter{habbrvyr}
+\bibliographystyleposter{habbrvyrolgabold}
 \bibliographyposter{posters}                   % 'articles' is the name of a BibTeX file
 % --- END for use with multibib package ----
 
@@ -185,8 +174,13 @@
 
 \cventry{2016}{Festival of Genomics California}{San Diego Convention Center}{San Diego, CA}{}{}
 \cventry{2016}{Fluidigm User Group Meeting}{City of Hope Hospital}{Los Angeles, CA}{}{}
+\cventry{2016}{Bioinformatics and Systems Biology Ph.D. Program Recruitment}{University of California, San Diego}{La Jolla, CA}{}{}
 \cventry{2015}{CodeNeuro}{New Museum}{New York, NY}{}{}
-\cventry{2014}{PyData}{}{New York, NY}{}{}
+\cventry{2015}{Bioinformatics Exchange}{University of California, San Diego}{La Jolla, CA}{}{}
+\cventry{2015}{Bioinformatics and Systems Biology Ph.D. Program Recruitment}{University of California, San Diego}{La Jolla, CA}{}{}
+\cventry{2014}{RNA Club}{University of California, San Diego}{La Jolla, CA}{}{}
+\cventry{2014}{Bioinformatics EXPO}{University of California, San Diego}{La Jolla, CA}{Best Talk, 2nd place}{}
+\cventry{2014}{PyData}{401 Park Ave. South}{New York, NY}{}{}
 
 \section{Teaching, Outreach, and Leadership}
 
@@ -197,7 +191,7 @@ Developed and led bioinformatics coursework of \emph{Single Cell Analysis Course
 }
 
 \cventry{2016}{Guest Instructor}{Quantitative Methods in Genetics and Genomics}{La Jolla, CA}{
-}{Taught three weeks of \texttt{git}, RNA-seq and analysis methods to graduate-level UCSD course of 30 students, mostly with limited programming experience}
+}{Taught three weeks of \texttt{git}, RNA-seq and analysis methods to graduate-level UCSD course of 30 students, mostly with limited programming experience. Course materials available at \url{http://github.com/biom262/biom262-2016}}
 
 \cventry{2015--2016}{Speaker and Co-Organizer}{CodeNeuro}{New York, NY and San Francisco, CA}{}{
 Presented \texttt{flotilla} software, taught ``coding for neuroscientists'' tutorial (\url{http://github.com/codeneuro/gitgoing}), and advanced data analysis tutorial}

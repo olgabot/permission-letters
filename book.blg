@@ -1,13 +1,13 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: book.aux
-The style file: habbrvyr.bst
+The style file: habbrvyrolgabold.bst
 Database file #1: books.bib
 You've used 1 entry,
-            2184 wiz_defined-function locations,
-            514 strings with 4083 characters,
-and the built_in function-call counts, 353 in all, are:
-= -- 31
+            2217 wiz_defined-function locations,
+            523 strings with 4177 characters,
+and the built_in function-call counts, 365 in all, are:
+= -- 33
 > -- 18
 < -- 1
 + -- 7
@@ -19,10 +19,10 @@ call.type$ -- 1
 change.case$ -- 6
 chr.to.int$ -- 0
 cite$ -- 1
-duplicate$ -- 14
+duplicate$ -- 16
 empty$ -- 26
 format.name$ -- 6
-if$ -- 69
+if$ -- 71
 int.to.chr$ -- 0
 int.to.str$ -- 1
 missing$ -- 2
@@ -30,9 +30,9 @@ newline$ -- 9
 num.names$ -- 3
 pop$ -- 9
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 9
 quote$ -- 0
-skip$ -- 8
+skip$ -- 10
 stack$ -- 0
 substring$ -- 5
 swap$ -- 3

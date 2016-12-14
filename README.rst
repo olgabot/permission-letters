@@ -1,6 +1,6 @@
 .. -*- restructuredtext -*-
 
-latex-moderncv is a repository containing my resume compiled in latex using a very nice modern theme
+`latex-moderncv` is a repository containing my resume compiled in latex using a very nice modern theme
 
 Credits
 =======
@@ -39,3 +39,15 @@ Notes
 You are free to take my .tex file and modify it to create your own resume. Please don't use my resume for anything else without my permission, though! 
 
 Good luck!
+
+Differences between the original fork
+-------------------------------------
+
+- References/Publications
+	- Uses three publication definitions using `multibib`: `journal`, `book`, and `poster`
+	- Uses `habbrvyrolgabold.bst` BibTeX style to sort publications by year and bold my name, Olga B Botvinnik. To bold your name, search for "Olga B Botvinnik" in `habbrvyrolgabold.bst` in the file and use your name instead
+- Visual style
+	- Uses `classic` style
+- Output and usage
+	- Added a `Makefile` to `make all` for the publications
+	- Creates a new pdf for the year and the month, so you can keep track of CVs over time. E.g. `olga-botvinnik-cv.tex` will get a pdf of `olga-botvinnik-cv-2016-12.pdf` for 
