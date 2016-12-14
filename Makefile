@@ -17,4 +17,4 @@ all: clean
 
 clean:
 	# Remove BibTeX and TeX auxiliary files
-	rm *bbl *blg *aux
+	rm -rf *bbl *blg *aux
