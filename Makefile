@@ -1,6 +1,6 @@
 
 TEX_NAME = olga-botvinnik-cv
-PDF_NAME = ${TEX_NAME}-`date +%Y-%M`
+PDF_NAME = ${TEX_NAME}-`date +%Y-%m`
 
 all:
 	latex ${TEX_NAME}.tex
@@ -15,3 +15,6 @@ all:
 	# Comment out the next line if you want to create a PDF
 	ps2pdf ${PDF_NAME}.ps ${PDF_NAME}.pdf
 
+clean:
+	# Remove BibTeX and TeX auxiliary files
+	rm *bbl *blg *aux
