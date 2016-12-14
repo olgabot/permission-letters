@@ -2,7 +2,7 @@
 TEX_NAME = olga-botvinnik-cv
 PDF_NAME = ${TEX_NAME}-`date +%Y-%m`
 
-all:
+all: clean
 	latex ${TEX_NAME}.tex
 	# bibtex each citation class separately
 	# These are defined in .tex, not the names of the .bib iles
