@@ -48,6 +48,8 @@ Differences between the original fork
 	- Uses `habbrvyrolgabold.bst` BibTeX style to sort publications by year and bold my name, Olga B Botvinnik. To bold your name, search for "Olga B Botvinnik" in `habbrvyrolgabold.bst` in the file and use your name instead
 - Visual style
 	- Uses `classic` style
+	- Added page numbers with "Page 3 of 4" at bottom right footer
 - Output and usage
-	- Added a `Makefile` to `make all` for the publications
+	- Added a `Makefile` to `make all` for the publications because it's pretty tedious otherwise.
+		- If you try to switch between BibTeX and Bib**La**TeX, it will complain that BibLaTeX didn't create the `.bbl` file. So, `make all` calls `make clean` which removes all `.aux`, `.blg` and `.bbl` files so that you start fresh every time. 
 	- Creates a new pdf for the year and the month, so you can keep track of CVs over time. E.g. `olga-botvinnik-cv.tex` will get a pdf of `olga-botvinnik-cv-2016-12.pdf` for 
