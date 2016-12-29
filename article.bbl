@@ -1,5 +1,14 @@
 \begin{thebibliography}{1}
 
+\bibitem{Nutter:2016fd}
+Curtis~A Nutter, Elizabeth~A Jaworski, Sunil~K Verma, Vaibhav Deshmukh,
+  Qiongling Wang, \textbf{\textsc{Olga~B Botvinnik}}, Mario~J Lozano, Ismail~J
+  Abass, Talha Ijaz, Allan~R Brasier, Nisha~J Garg, Xander H~T Wehrens, Gene~W
+  Yeo, and Muge~N Kuyumcu-Martinez.
+\newblock {Dysregulation of RBFOX2 Is an Early Event in Cardiac Pathogenesis of
+  Diabetes}.
+\newblock {\em Cell Reports}, 15(10):2200--2213, 2016.
+
 \bibitem{kim2016characterizing}
 Jong~Wook Kim*, \textbf{\textsc{Olga~B Botvinnik*}}, Omar Abudayyeh, Chet
   Birger, Joseph Rosenbluh, Yashaswi Shrestha, Mohamed~E Abazeed, Peter~S
@@ -13,9 +22,16 @@ Jong~Wook Kim*, \textbf{\textsc{Olga~B Botvinnik*}}, Omar Abudayyeh, Chet
 Kris~C Wood, David~J Konieczkowski, Cory~M Johannessen, Jesse~S Boehm, Pablo
   Tamayo, \textbf{\textsc{Olga~B Botvinnik}}, Jill~P Mesirov, William~C Hahn,
   David~E Root, Levi~A Garraway, et~al.
-\newblock Microscale screening reveals genetic modifiers of therapeutic
-  response in melanoma.
+\newblock {MicroSCALE screening reveals genetic modifiers of therapeutic
+  response in melanoma}.
 \newblock {\em Science Signaling}, 5(224):rs4, 2012.
+
+\bibitem{Goncearenco:2012eha}
+A~Goncearenco, P~Grynberg, \textbf{\textsc{Olga~B Botvinnik}}, Geoff Macintyre,
+  and Thomas Abeel.
+\newblock {Highlights from the Eighth International Society for Computational
+  Biology (ISCB) Student Council Symposium 2012}.
+\newblock {\em BMC Bioinformatics}, 2012.
 
 \bibitem{galili2012prediction}
 Naomi Galili, Pablo Tamayo, \textbf{\textsc{Olga~B Botvinnik}}, Jill~P Mesirov,
@@ -27,17 +43,17 @@ Naomi Galili, Pablo Tamayo, \textbf{\textsc{Olga~B Botvinnik}}, Jill~P Mesirov,
 \bibitem{galili2011gene}
 Naomi Galili, Pablo Tamayo, \textbf{\textsc{Olga~B Botvinnik}}, Jill~P Mesirov,
   Jennifer Zikria, Gail Brown, and Azra Raza.
-\newblock Gene expression studies may identify lower risk myelodysplastic
-  syndrome patients likely to respond to therapy with ezatiostat hydrochloride
-  (tlk199).
+\newblock {Gene Expression Studies May Identify Lower Risk Myelodysplastic
+  Syndrome Patients Likely to Respond to Therapy with Ezatiostat Hydrochloride
+  (TLK199)}.
 \newblock {\em Blood}, 118(21):2779--2779, 2011.
 
 \bibitem{berger2008variation}
 Michael~F Berger, Gwenael Badis, Andrew~R Gehrke, Shaheynoor Talukder,
   Anthony~A Philippakis, Lourdes Pena-Castillo, Trevis~M Alleyne, Sanie
   Mnaimneh, \textbf{\textsc{Olga~B Botvinnik}}, Esther~T Chan, et~al.
-\newblock Variation in homeodomain dna binding revealed by high-resolution
-  analysis of sequence preferences.
+\newblock {Variation in homeodomain DNA binding revealed by high-resolution
+  analysis of sequence preferences}.
 \newblock {\em Cell}, 133(7):1266--1276, 2008.
 
 \end{thebibliography}
