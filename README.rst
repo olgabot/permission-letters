@@ -19,19 +19,59 @@ You will need to have latex installed on your system. If you are using OSX, the 
 Installation
 ============
 
-Install Latex and download the moderncv theme. Place the moderncv theme somewhere Latex can find it. You can just place the folder in the same place as your .tex file as I have::
+Install Latex and download the moderncv theme. Place the moderncv theme somewhere Latex can find it. Check out the `Makefile` to change the variable `CV_NAME = olga-botvinnik-cv` for
 
-    /my-resume
-        my-resume.tex
-        my-resume.pdf
+    /latex-moderncv
+        olga-botvinnik-cv.tex
+        olga-botvinnik-cv.pdf
         /moderncv
+
+References
+==========
+
+This is where it gets tricky. To have the different sub-sections in "Publications," you need to use the `multibib` package. I used three different sections for the references in my resume (corresponding `.bib` file):
+
+- "Journal Articles" (`articles.bib`)
+- "Books" (`books.bib`)
+- "Conference Posters" (`posters.bib`)
+
+I initialized the "Book," "Journal Article", and "Conference Poster" sections was initialized in the preamble (aka before ``\begin{document}``). Notice that the citation directive `book` corresponds to "Books", `article` corresponds to "Journal Articles," and `poster` corresponds to "Conference Posters:"
+
+    \newcites{book,article,poster}{{Books},{Journal Articles},{Conference Posters}}
+
+In the actual document, here is what my citations look like. Notice that `\nocitearticle` corresponds to the `article` initialized above, while `articles.bib` is the actual reference file:
+
+    % --- START for use with multibib package ---
+    % Publications from a BibTeX file using the multibib package
+    \section{Publications}
+
+    \nocitearticle{*}
+    \bibliographystylearticle{habbrvyrolgabold}
+    \bibliographyarticle{articles}                   % 'articles' is the name of a BibTeX file
+
+    \nocitebook{*}
+    \bibliographystylebook{habbrvyrolgabold}
+    \bibliographybook{books}                   % 'books' is the name of a BibTeX file
+
+    \nociteposter{*}
+    \bibliographystyleposter{habbrvyrolgabold}
+    \bibliographyposter{posters}                   % 'posters' is the name of a BibTeX file
+    % --- END for use with multibib package ----
+
 
 Compiling the Resume
 ====================
 
-Simply use the ``pdflatex`` command in your terminal::
+This is also tricky. I wanted to automatically build the bibliography every time, and do it from scratch. To do this, edit the `Makefile` to use your own `.tex` file name in `CV_NAME = olga-botvinnik-cv` (e.g. for `olga-botvinnik-cv.tex`), and then do:
 
-    pdflatex my-resume.tex
+    make cv
+
+Cover Letters
+-------------
+
+To make cover letters, e.g. for Post-Doc applications, check out `potential-advisors/example-advisor.tex`. This is the cover letter template. This was also tricky to figure out but what's nice is that for all `.tex` files that you add to `potential-advisors`, the `make` command will iterate over all of them and create a single Cover Letter + CV document that you can send to them. The command is:
+
+    make coverletter
 
 Notes
 =====
@@ -50,6 +90,6 @@ Differences between the original fork
 	- Uses `classic` style
 	- Added page numbers with "Page 3 of 4" at bottom right footer
 - Output and usage
-	- Added a `Makefile` to `make all` for the publications because it's pretty tedious otherwise.
+	- Added a `Makefile` to `make cv` for the publications because it's pretty tedious otherwise.
 		- If you try to switch between BibTeX and Bib**La**TeX, it will complain that BibLaTeX didn't create the `.bbl` file. So, `make all` calls `make clean` which removes all `.aux`, `.blg` and `.bbl` files so that you start fresh every time.
-	- Creates a new pdf for the year and the month, so you can keep track of CVs over time. E.g. `olga-botvinnik-cv.tex` will get a pdf of `olga-botvinnik-cv-2016-12.pdf` for
+    - Makefile also has `make coverletter` which iterates over the `.tex` files in the `potential-advisors` folder and creates a single coverletter + cv file with the advisor's name, e.g. `olga-botvinnik-cv-example-advisor.pdf`
