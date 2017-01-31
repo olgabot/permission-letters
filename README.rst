@@ -36,7 +36,7 @@ Simply use the ``pdflatex`` command in your terminal::
 Notes
 =====
 
-You are free to take my .tex file and modify it to create your own resume. Please don't use my resume for anything else without my permission, though! 
+You are free to take my .tex file and modify it to create your own resume. Please don't use my resume for anything else without my permission, though!
 
 Good luck!
 
@@ -51,5 +51,5 @@ Differences between the original fork
 	- Added page numbers with "Page 3 of 4" at bottom right footer
 - Output and usage
 	- Added a `Makefile` to `make all` for the publications because it's pretty tedious otherwise.
-		- If you try to switch between BibTeX and Bib**La**TeX, it will complain that BibLaTeX didn't create the `.bbl` file. So, `make all` calls `make clean` which removes all `.aux`, `.blg` and `.bbl` files so that you start fresh every time. 
-	- Creates a new pdf for the year and the month, so you can keep track of CVs over time. E.g. `olga-botvinnik-cv.tex` will get a pdf of `olga-botvinnik-cv-2016-12.pdf` for 
+		- If you try to switch between BibTeX and Bib**La**TeX, it will complain that BibLaTeX didn't create the `.bbl` file. So, `make all` calls `make clean` which removes all `.aux`, `.blg` and `.bbl` files so that you start fresh every time.
+	- Creates a new pdf for the year and the month, so you can keep track of CVs over time. E.g. `olga-botvinnik-cv.tex` will get a pdf of `olga-botvinnik-cv-2016-12.pdf` for

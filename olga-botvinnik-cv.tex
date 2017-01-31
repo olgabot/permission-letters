@@ -1,4 +1,4 @@
-%% start of file `template.tex'.
+% start of file `template.tex'.
 %% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
 %% Copyright 2010-2011 Mark Liu (markwayneliu@gmail.com).
 %% Copyright 2016-2017 Olga Botvinnik (olga.botvinnik@gmail.com).
@@ -33,8 +33,14 @@
 %\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
 
 % --- Begin use with Multibib ----
-\usepackage{multibib}
+\usepackage[resetlabels]{multibib}
 \newcites{book,article,poster}{{Books},{Journal Articles},{Conference Posters}}
+
+% Number the Publications
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
 % --- END use with Multibib ---
 
 % BibTeX - don't print the year for publications that are "in press"
@@ -50,6 +56,7 @@
 % \mobile{(omitted for web)}                    % optional, remove the line if not wanted
 \homepage{http://olgabotvinnik.com}                % optional, remove the line if not wanted
 \email{olgabot@ucsd.edu}                      % optional, remove the line if not wanted
+\social[linkedin][https://www.linkedin.com/in/olgabotvinnik]{olga-botvinnik}
 \social[twitter]{olgabot}                             % optional, remove / comment the line if not wanted
 \social[github]{olgabot}                              % optional, remove / comment the line if not wanted
 % \date{\today}
@@ -90,28 +97,31 @@
 
 \section{Research Positions}
 
-\cventry{2013--Present}{Gene Yeo Laboratory}{University of California, San Diego}{La Jolla, CA}{}{Collaborated with wet-lab researchers to analyze single-cell motor neuron differentiation mRNA-seq data. Independently developed several software packages written in Python for alternative splicing analyses}
+\cventry{2013--Present}{Gene Yeo Laboratory}{University of California, San Diego}{La Jolla, CA}{}{Led machine-learning analyses of single-cell motor neuron differentiation mRNA-seq data, in collaboration with wet-lab researchers. Independently developed several software packages written in Python for alternative splicing analyses}
 
 \cventry{2012--2013}{Research Rotations}{University of California, San Diego}{La Jolla, CA}{}{Worked in Profs. Trey Ideker, Gene Yeo, and Pavel Pevzner’s laboratories}
 
-\cventry{2012}{Nader Pourmand Laboratory}{University of California, Santa Cruz}{Santa Cruz, CA}{}{Developed pipeline to analyze RNA-Seq data, applied to single-cell analysis of breast cancer drug resistance to paclitaxel}
+\cventry{2012}{Nader Pourmand Laboratory}{University of California, Santa Cruz}{Santa Cruz, CA}{}{Analyzed single-cell response of breast cancer drug resistance to paclitaxel}
 
 \cventry{2010--2011}{Jill Mesirov Laboratory}{Broad Institute of Harvard and MIT}{Cambridge, MA}{}{Created REVEALER algorithm to unveil candidate oncogenic activators}
 
-\cventry{2010}{Sebastian Seung Laboratory}{MIT Department of Brain and Cognitive Sciences}{Cambridge, MA}{}{Computed directionality of neurons in electron microscopy of rabbit retina inner plexiform layer slices}
+\cventry{2010}{Sebastian Seung Laboratory}{MIT Department of Brain and Cognitive Sciences}{Cambridge, MA}{}{Computed directionality of neurons in electron microscopy of rabbit retina}
 
-\cventry{2009}{David Gifford Laboratory}{MIT Computer Science and Artificial Intelligence Laboratory}{Cambridge, MA}{}{Tested whether measures of information flow can predict gene lethality in different genomic networks}
+\cventry{2009}{David Gifford Laboratory}{MIT Computer Science and Artificial Intelligence Laboratory}{Cambridge, MA}{}{Tested whether information flow can predict gene lethality in genomic networks}
 
-\cventry{2008}{Sean Eddy Laboratory}{Howard Hughes Medical Institute Janelia Farm Research Campus}{Ashburn, VA}{}{Improved protein homology search by creating a better null homology model with Hidden Markov Models}
+\cventry{2008}{Sean Eddy Laboratory}{Howard Hughes Medical Institute Janelia Farm Research Campus}{Ashburn, VA}{}{Used Hidden Markov Models to improve protein homology search with robust null models}
 
 \cventry{2007}{Martha Bulyk Laboratory}{Brigham and Women's Hospital, Division of Genetics}{Boston, MA}{}{Analyzed DNA binding specificities of mouse homeodomain transcription factors}
 
 
-\section{Honors and Awards}
+\section{Awards}
 
-\cvline{2016}{100 Awesome Women In The Open-Source Community You Should Know, sourced.com}
+\subsection{Fellowships}
 \cvline{2014}{NumFocus John Hunter Technical Fellowship for Open Source Science}
 \cvline{2013--2016}{National Defense Science and Engineering Graduate Fellowship}
+
+\subsection{Honors}
+\cvline{2016}{100 Awesome Women In The Open-Source Community You Should Know, sourced.com}
 \cvline{2013}{Fannie and John Hertz Foundation Fellowship Finalist}
 \cvline{2012}{National Science Foundation Graduate Research Fellowship: Honorable Mention}
 \cvline{2012}{University of California Regents Scholarship}
@@ -119,11 +129,11 @@
 \cvline{2008}{Howard Hughes Medical Institute Janelia Farm Research Summer Scholar}
 
 
-% --- START For use with BibLatex --- 
+% --- START For use with BibLatex ---
 % \begin{refsection}[publications]
-% \nocite{*} 
+% \nocite{*}
 % \printbibliography[resetnumbers=true,sorting=ynt,%mod
-% title={Entire publication list sorted by year}]   
+% title={Entire publication list sorted by year}]
 % \end{refsection}
 % ---- END for use with biblatex ----
 
@@ -133,7 +143,7 @@
 % % \biblographystyle{plain}
 % \bibliography{publications}                    % 'publications' is the name of a BibTeX file
 
-% % \nocite{*}  
+% % \nocite{*}
 % % \bibliographystyle{habbrvyr}
 % % \bibliography{books}
 % ---- END for use with bibtex ----
@@ -177,6 +187,9 @@
 
 % \cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
+\cventry{2015--Present}{Principal Cellist}{UCSD Chamber Orchestra}{La Jolla, CA}{}{First cellist out of six. Led cello section during rehearsals.}
+
+
 \cventry{2016}{Teaching Assistant}{Cold Spring Harbor Laboratories}{Cold Spring Harbor, NY}{}{
 Developed and led bioinformatics coursework of \emph{Single Cell Analysis Course} including alignment, machine learning, Python, and basic command line tools to an audience largely with little to no programming experience. Course materials available at \url{http://github.com/YeoLab/single-cell-bioinformatics}
 }
@@ -190,6 +203,10 @@ Presented \texttt{flotilla} software, taught ``coding for neuroscientists'' tuto
 \cventry{2015--2016}{President and Co-Founder}{Graduate Bioinformatics Council}{La Jolla, CA}{}{
 Founded graduate student council organization for UCSD Bioinformatics and Systems Biology Program. Advocated for student voices, organized ``town hall'' meetings, social hours, fellowhsip peer review, and led a team of eight vice presidents and representatives.
 }
+
+\cventry{2015}{Guest Instructor}{Quantitative Methods in Genetics and Genomics}{La Jolla, CA}{
+}{Taught ``data cleaning'' and plotting course using Python to graduate-level UCSD course of 10 students, mostly with limited programming experience.}
+
 
 \cventry{2013--2016}{Volunteer}{San Diego Science and Engineering Festival}{San Diego, CA}{}{Developed and demonstrated bioinformatics modules to all ages at UCSD Bioinformatics booth.}
 
@@ -210,8 +227,9 @@ Founded graduate student council organization for UCSD Bioinformatics and System
 
 
 \section{Software}
-\cvline{}{All software is written in Python and open source, licensed under the 3-clause BSD license.}
-\cvline{\texttt{anchor}}{Categorizes alternative splicing data into ``modes''---bimodal, unimodal, or uniform. \url{http://github.com/YeoLab/anchor} (1 star on GitHub)}
+\cvline{}{All software is written in Python and open source, licensed under the 3-clause BSD license, except where noted.}
+
+\cvline{\texttt{anchor}}{Categorizes alternative splicing data into ``modes''---bimodal, unimodal, or uniform. \url{http://github.com/YeoLab/anchor}}
 
 \cvline{\texttt{bonvoyage}}{Transforms 1d splicing profiles into 2d space to maximize interpretability of change in signal. \url{http://github.com/YeoLab/bonvoyage}}
 
@@ -225,8 +243,14 @@ Founded graduate student council organization for UCSD Bioinformatics and System
 
 \cvline{\texttt{poshsplice}}{Annotates alternative splicing events with biological features such as translated protein product. \url{http://github.com/olgabot/poshsplice} (2 stars on GitHub)}
 
-\cvline{\small\texttt{prettyplotlib}}{Painlessly create beautiful \texttt{matplotlib} plots. \url{http://github.com/olgabot/prettyplotlib} (1,159 stars on GitHub)}
+\cvline{\small\texttt{prettyplotlib}}{Painlessly create beautiful \texttt{matplotlib} plots.
+% prettyplotlib url is too long for the page width and looks weird so using the small font here
+\newline\url{http://github.com/olgabot/prettyplotlib} (1,159 stars on GitHub)}
 
-\cvline{\texttt{seaborn}}{Contributor, wrote clustered heatmap classes and function. \url{http://github.com/mwaskom/seaborn} 3,602 stars on GitHub}
+\cvline{\texttt{pyhomer}}{Utility functions to work with output from the HOMER motif finding program. \url{https://github.com/olgabot/pyhomer}}
+
+\cvline{\texttt{seaborn}}{Statistical visualization library. Contributor, wrote clustered heatmap classes and function. \url{http://github.com/mwaskom/seaborn} (3,602 stars on GitHub)}
+
+\cvline{\texttt{wasabiplot}*}{Plot coverage and junction reads for any bam file and any region. *Derivative of SashimiPlot, and thus under the GNU General Public License (GPL). \url{http://github.com/olgabot/wasabiplot}}
 
 \end{document}
