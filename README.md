@@ -8,6 +8,10 @@ See the `Makefile` for the list of names and `template.tex` which shows three di
 2. Submitted, but not yet published manuscripts
 3. Manuscripts in preparation
 
+Here is the example output:
+
+![Example permission letter with signature line](example.tiff)
+
 ## Usage
 
 To create permission letters, do:
