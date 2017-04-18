@@ -10,7 +10,7 @@ See the `Makefile` for the list of names and `template.tex` which shows three di
 
 Here is the example output:
 
-![Example permission letter with signature line](example.tiff)
+![Example permission letter with signature line](example.png)
 
 ## Usage
 
