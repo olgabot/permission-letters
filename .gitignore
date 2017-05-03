@@ -9,3 +9,6 @@ cover-letters
 
 # Remove emacs files
 *~
+
+# Remove sensitive information
+olga_request.md
